@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  .calculator {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+  input, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4cae4c;
+  }
+  .result {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="calculator">
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="calculate()">Calculate</button>
+  <div class="result" id="result98">0.98 times: <span></span></div>
+  <div class="result" id="result96">0.96 times: <span></span></div>
+  <div class="result" id="result94">0.94 times: <span></span></div>
+</div>
+
+<script>
+  function calculate() {
+    const number = parseFloat(document.getElementById('numberInput').value);
+    if (isNaN(number)) {
+      alert('Please enter a valid number.');
+      return;
+    }
+    const result98 = number * 0.98;
+    const result96 = number * 0.96;
+    const result94 = number * 0.94;
+    
+    document.getElementById('result98').children[0].textContent = result98.toFixed(2);
+    document.getElementById('result96').children[0].textContent = result96.toFixed(2);
+    document.getElementById('result94').children[0].textContent = result94.toFixed(2);
+  }
+</script>
+</body>
+</html>
