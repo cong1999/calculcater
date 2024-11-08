@@ -53,9 +53,14 @@
 <div class="calculator">
   <input type="number" id="numberInput" placeholder="Enter a number">
   <button onclick="calculate()">Calculate</button>
+  <h1>Buy</h1>
   <div class="result" id="result98">0.98 times: <span></span></div>
   <div class="result" id="result96">0.96 times: <span></span></div>
   <div class="result" id="result94">0.94 times: <span></span></div>
+  <h1>Sell</h1>
+  <div class="result" id="result107">1.07 times: <span></span></div>
+  <div class="result" id="result104">1.04 times: <span></span></div>
+  <div class="result" id="result101">1.01 times: <span></span></div>
 </div>
 
 <script>
@@ -68,10 +73,16 @@
     const result98 = number * 0.98;
     const result96 = number * 0.96;
     const result94 = number * 0.94;
+    const result107 = number * 1.07;
+    const result104 = number * 1.04;
+    const result101 = number * 1.01;
     
     document.getElementById('result98').children[0].textContent = result98.toFixed(2);
     document.getElementById('result96').children[0].textContent = result96.toFixed(2);
     document.getElementById('result94').children[0].textContent = result94.toFixed(2);
+    document.getElementById('result107').children[0].textContent = result107.toFixed(2);
+    document.getElementById('result104').children[0].textContent = result104.toFixed(2);
+    document.getElementById('result101').children[0].textContent = result101.toFixed(2);
   }
 </script>
 </body>
